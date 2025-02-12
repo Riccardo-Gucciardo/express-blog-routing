@@ -3,12 +3,12 @@ const router = express.Router();
 const app = express()
 
 // index
-router.get('/', function (req, res) {
+    router.get('/', function (req, res) {
     res.send('Lista delle pizze');
     });
     // show
     router.get('/:id', function (req, res) {
-    res.send('Dettagli della pizza ' + req.params.id);
+    res.send(`Dettagli della pizza ${req.params.id}`);
     });
     // store
     router.post('/', function (req, res) {
@@ -16,15 +16,15 @@ router.get('/', function (req, res) {
     });
     // update
     router.put('/:id', function (req, res) {
-    res.send('Modifica integrale della pizza ' + req.params.id);
+    res.send(`Modifica integrale della pizza ${req.params.id} `);
     });
     // modify
     router.patch('/:id', function (req, res) {
-    res.send('Modifica parziale della pizza ' + req.params.id);
+    res.send(`Modifica parziale della pizza ${req.params.id} `);
     });
     // destroy
     router.delete('/:id', function (req, res) {
-    res.send('Eliminazione della pizza ' + req.params.id);
+    res.send(`Eliminazione della pizza  ${req.params.id}`);
     });
 
 
